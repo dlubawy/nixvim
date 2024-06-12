@@ -142,7 +142,7 @@ with lib;
     {
       type = lib.mkForce "lua";
       finalPackage = wrappedNeovim;
-      initContent = readFile init;
+      initContent = customRC;
       initPath = "${init}";
 
       printInitPackage = pkgs.writeShellApplication {
